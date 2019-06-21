@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="text-center" style="margin-top:2%;">
+    <input type="file" name="temp" id="fileUploadID" ng2FileSelect [uploader]="uploader" />
+    <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+      Send
+    </button>
+  </div>
+  <div class="card" style="margin-top:2%;">
+    <div class="card-body">
+        <canvas id="chartJSContainer" width="600" height="250"></canvas>
+        <div class="text-center">
+            <button class="btn btn-success btn-s" style="margin-right:10px;" (click)="prevPage()">Previous</button>
+          <button class="btn btn-success btn-s" style="margin-left:10px;" (click)="nextPage()">Next</button>
+        </div>
+    </div>
+  </div>
+</div>
